@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 27% 98%;
+    --foreground: 228 29% 7%;
+    --foreground-light: 231 20% 61%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 231 37% 63%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 29% 7%;
+
+    --primary: 252 94% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 231 67% 99%;
+    --secondary-hover: 231 73% 93%;
+    --secondary-foreground: 231 36% 63%;
+
+    --tertiary: 231 20% 27%;
+    --tertiary-foreground: 231 20% 61%;
+
+    --muted: 0 0% 100%;
+    --muted-foreground: 231 37% 63%;
+
+    --accent: 231 67% 99%;
+    --accent-foreground: 231 37% 63%;
+
+    --destructive: 0 80% 63%;
+    --destructive-foreground: 0 0% 100%;
+
+    --scrollbar: 231 73% 93%;
+
+    --border: 231 15% 90%;
+    --input: 231 75% 93%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 233 30% 11%;
+    --foreground: 0 0% 100%;
+    --foreground-light: 231 75% 93%;
+
+    --card: 233 31% 17%;
+    --card-foreground: 231 75% 93%;
+
+    --popover: 233 30% 21%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 252 94% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 233 30% 21%;
+    --secondary-hover: 233 30% 25%;
+    --secondary-foreground: 231 75% 93%;
+
+    --tertiary: 231 20% 27%;
+    --tertiary-foreground: 231 20% 61%;
+
+    --muted: 233 31% 17%;
+    --muted-foreground: 231 75% 93%;
+
+    --accent: 233 30% 21%;
+    --accent-foreground: 231 75% 93%;
+
+    --destructive: 0 80% 63%;
+    --destructive-foreground: 0 0% 100%;
+
+    --scrollbar: 233 31% 17%;
+
+    --border: 231 20% 18%;
+    --input: 233 30% 21%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  #icon-plus path {
+    @apply stroke-primary;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(231, 73%, 93%);
+    border-radius: 10px;
+  }
+
+  /* Add a thumb */
+  html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(233, 31%, 17%);
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
