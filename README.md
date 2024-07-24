@@ -44,7 +44,7 @@ To get started with the Invoice Manager, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/dev-anurag-singh/invoice-manager.git
+   git clone https://github.com/ONUOHA92/Invoice-manager-app.git
    ```
 2. **Install the dependencies:**
    ```bash
